@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Text2Speech App</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://use.fontawesome.com/ae21f93159.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h2>Simple Text 2 Speech App</h2>
+        <textarea type='text' id="textInput" rows="8" placeholder="enter text to speak">
+        </textarea>
+        <div class="cta">
+            <button id="btnSpeak" onclick="speakText()">Speak Text</button>
+            <button id="btnPause" onclick="pauseSpeech()">Pause</button>
+            <button id="btnStop" onclick="stopSpeech()">Stop</button>
+        </div>
+        <div class="voiceList">
+            <label for="voiceOptions">Select Voice:</label>
+            <select name="voiceOptions" id="voiceOptions" onchange="changeVoice(this.value)">
+                <option value="voice1">Peter's Voice</option>
+                <option value="voice7">Stella's Voice</option>
+                <option value="voice2">John's Voice</option>
+                <option value="voice9">Funke's Voice</option>
+            </select>
+        </div>
+        <div class="optionsDiv">
+            <label for="speedOptions">Select speed:</label>
+            <select name="speedOptions" id="speedOptions" onchange="changeVoiceSpeed(this.value)">
+              <option value="speed1">1x speed</option>
+              <option value="speed0.75">0.75x speed</option>
+              <option value="speed0.5">0.5x speed</option>
+              <option value="speed1.25">1.25x speed</option>
+              <option value="speed1.5">1.5x speed</option>
+              <option value="speed1.75">1.75x speed</option>
+              <option value="speed2">2x speed</option>
+            </select>
+          </div>
+       
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
