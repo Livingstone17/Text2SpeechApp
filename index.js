@@ -35,12 +35,12 @@
 speechSynthesis.cancel();
 
 var isSpeaking = false;
-
+var tts = window.speechSynthesis;
 var speech = new SpeechSynthesisUtterance();
 speech.rate =1;
 speech.pitch=1;
 speech.volume=1;
-speech.voice = speechSynthesis.getVoices()[0];
+var voices = tts.getVoices();
 
 const speakText = () =>{
     isSpeaking =true;
@@ -68,18 +68,25 @@ stopSpeech = ()=>{
 }
 
 // method to change the voices
-changeVoice = (voice) =>{
-    if(voice == 'voice1'){
-        speech.voice = speechSynthesis.getVoices()[8];
-    }else if(voice == 'voice7'){
-        speech.voice = speechSynthesis.getVoices()[33];
-    }else if(voice == 'voice2'){
-        speech.voice = speechSynthesis.getVoices()[0];
-    }else if(voice == 'voice9'){
-        speech.voice = speechSynthesis.getVoices()[41];
-    }
-}
 
+changeVoice=(voice)=> {
+    if (voice == "voice1") {
+      speech.voice = speechSynthesis.getVoices()[8];
+    } else if (voice == "voice2") {
+      speech.voice = speechSynthesis.getVoices()[6];
+    } else if (voice == "voice3") {
+     speech.voice = speechSynthesis.getVoices()[1];
+    } else if (voice == "voice4") {
+      speech.voice = speechSynthesis.getVoices()[11];
+    } else if (voice == "voice5") {
+      speech.voice = speechSynthesis.getVoices()[4];
+    } 
+    else if (voice == "voice6") {
+        speech.voice = speechSynthesis.getVoices()[10];
+      } 
+  }
+
+speechSynthesis.addEventListener('voiceschanged',changeVoice);
 
 changeVoiceSpeed=(voiceSpeed)=> {
     // For some reason, speed below 0.5 doesn't work
