@@ -53,11 +53,11 @@ pauseSpeech = () =>{
     if(isSpeaking){
         isSpeaking=false;
         speechSynthesis.pause();
-        document.getElementById('btnPause').innerHTML = `Resume`
+        document.getElementById('btnPause').innerHTML = `Resume <i class="fa fa-play-circle" aria-hidden="true"></i>`
     }else{
         isSpeaking = true;
         speechSynthesis.resume();
-        document.getElementById('btnPause').innerHTML = `Pause`
+        document.getElementById('btnPause').innerHTML = `Pause <i class="fa fa-pause-circle" aria-hidden="true"></i>`
     }
 }
 

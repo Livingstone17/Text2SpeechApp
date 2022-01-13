@@ -5,7 +5,7 @@
 }
 
 body{
-    background: linear-gradient(blue,green);
+    background: linear-gradient(to right, #DECBA4, #3E5151);
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -22,18 +22,21 @@ body{
     padding-left: 12em;
 }
 .container h2{
-
+    margin-top: 10px;
     color: #fff;
 }
 #textInput{
     border: 1px solid #dbdbdb;
     border-radius: 5px;
-    background:linen;
+    background:none;
     width: 300px;
     margin-top: 10px;
 }
 #textInput:focus{
     outline: honeydew;
+}
+#textInput::placeholder{
+    color: red;
 }
 .cta{
     display: flex;
@@ -42,11 +45,21 @@ body{
 }
 
 .cta button{
-    width: 80px;
+    width: fit-content;
     height: 30px;
     border-radius: 5px;
     border: none;
     margin: 10px;
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 5px;
+    transition: all .3s ease-out;
+}
+.cta button:hover{
+    cursor: pointer;
+    background:#fff;
+    color: #000;
 }
 .container label{
     color: #fff;

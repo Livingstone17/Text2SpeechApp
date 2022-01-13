@@ -12,12 +12,12 @@
 <body>
     <div class="container">
         <h2>Simple Text 2 Speech App</h2>
-        <textarea type='text' id="textInput" rows="8" placeholder="enter text to speak">
+        <textarea type='text' id="textInput" rows="8" placeholder="enter text to speak" autofocus>
         </textarea>
         <div class="cta">
-            <button id="btnSpeak" onclick="speakText()">Speak Text</button>
-            <button id="btnPause" onclick="pauseSpeech()">Pause</button>
-            <button id="btnStop" onclick="stopSpeech()">Stop</button>
+            <button id="btnSpeak" onclick="speakText()">Speak Text <i class="fa fa-volume-up" aria-hidden="true"></i></button>
+            <button id="btnPause" onclick="pauseSpeech()">Pause <i class="fa fa-pause-circle" aria-hidden="true"></i></button>
+            <button id="btnStop" onclick="stopSpeech()">Stop <i class="fa fa-stop-circle" aria-hidden="true"></i></button>
         </div>
         <div class="voiceList">
             <label for="voiceOptions">Select Voice:</label>
